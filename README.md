@@ -23,6 +23,7 @@ This README briefly highlights what we have accomplished in this project. If you
 
 ### 1. Problem formulation:
 **Our Dataset:** [https://www.kaggle.com/datasets/simranjain17/insurance](https://www.kaggle.com/datasets/simranjain17/insurance)
+
 **Problem Definition:** Develop a machine learning model that can, as far as possible, accurately predict insurance premiums based on a given set of demographic and health-related features, such as age, sex, BMI, number of children, smoker status, and region.
 
 ### 2. Data preparation and cleaning:
