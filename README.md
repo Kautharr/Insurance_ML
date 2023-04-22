@@ -51,6 +51,7 @@ The updated dataframe consists of 10 columns, with the 'smoker_bool', 'sex_bool'
 | Charges | Decimal |
 | Region | Categorical (String) |
 | Number of Children | Integer |
+The dataset consists of insurance-related information of individuals. The variables in the dataset are Age, Sex, Smoker status, BMI, Charges, Region, and the number of children. The age and the number of children are represented as an integer while sex and smoker are Boolean values. BMI and charges are decimal values. Region is a categorical variable represented as a string. This dataset can be used to perform various analyses related to insurance.
 
 
 ### 3. ****Exploratory Data Analysis:****
