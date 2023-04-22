@@ -11,11 +11,11 @@ Members:
 1) Kauthar Ahmed Basharahil
 2) Bhupathiraju Mihir Varma 
 3) Parth Batra
-
+----------------
 ### Description:
 This repository contains all the Jupyter Notebooks, datasets, images, video presentations, and the source materials/references we have used and created as part of the Mini Project for SC1015: Introduction to Data Science and AI.
 This README briefly highlights what we have accomplished in this project. For a more detailed explanation, you can refer to the the Jupyter Notebooks in this repository. They contain more in-depth descriptions and finer details which are not mentioned here in the README.
-
+----------------
 ### Table of Contents:
 1. Problem Formulation
 2. Data Preparation and Cleaning
@@ -24,7 +24,7 @@ This README briefly highlights what we have accomplished in this project. For a 
 5. Metrics and Findings
 6. Conclusion
 7. References
-
+----------------
 ### 1. Problem formulation:
 **Our Dataset:** [https://www.kaggle.com/datasets/simranjain17/insurance](https://www.kaggle.com/datasets/simranjain17/insurance)
 
