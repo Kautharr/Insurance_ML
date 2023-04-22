@@ -57,7 +57,7 @@ To obtain favourable data types, we made the following changes to the dataset:
 The updated dataframe consists of 10 columns, with the 'smoker_bool', 'sex_bool' and 'region_cat' columns appended to allow for further analysis below (EDA, correlation, etc.). 
 
 
-### 3. ****Exploratory Data Analysis:****
+### [3. ****Exploratory Data Analysis:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_3_EDA.ipynb)
 The first step in the exploratory data analysis was to identify the variables that have the most significant impact on the medical insurance charges. To achieve this, we conducted a correlation analysis between the variables. The correlation matrix revealed that smoker_bool, age, and bmi have the highest correlation with charges.
 1. Exploring BMI v Charges: A pie chart was generated, with the population breakdown of BMI categories; which was compared to another pie chart that tabulated the breakdown of total charges into BMI categories. To further investigate this relationship, a scatter plot was created to plot charges against BMI. No clear linear trend observed but the comparative pie charts suggest that higher BMI leads to higher charges.
 2. Exploring AGE v Charges: After removing outliers, we found a linear trend between the mean age and charges incurred. The p-value from the plot suggested strong evidence against the null hypothesis (of no correlation), supporting the importance of age in predicting charges.
