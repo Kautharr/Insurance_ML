@@ -30,6 +30,7 @@ This README briefly highlights what we have accomplished in this project. For a 
 
 **Problem Definition:** To develop a machine learning model that can, as far as possible, accurately predict insurance premiums based on a given set of demographic and health-related dataset.
 
+Motivation: We're trying to solve a real-world problem by using a dataset on insurance fees to promote perfect information in the insurance industry. It is crucial to accurately price policies based on an individual's unique characteristics, detect fraudulent claims, and assess potential customers' risk. By developing a predictive model based on this dataset, insurance companies can reduce the risk of overcharging or undercharging, save significant amounts of money by detecting fraudulent claims, and make informed decisions about offering coverage to potential customers and at what price.
 
 
 ### 2. Data preparation and cleaning:
