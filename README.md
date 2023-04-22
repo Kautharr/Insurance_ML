@@ -25,7 +25,7 @@ This README briefly highlights what we have accomplished in this project. For a 
 6. Conclusion
 7. References
 
-### [1. Problem formulation:](https://github.com/Kautharr/Insurance_ML/blob/main/codebase.ipynb)
+### [1. Problem formulation:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_2_DataCleaning.ipynb)
 
 **Our Dataset:** [https://www.kaggle.com/datasets/simranjain17/insurance](https://www.kaggle.com/datasets/simranjain17/insurance)
 
@@ -34,7 +34,7 @@ This README briefly highlights what we have accomplished in this project. For a 
 **Motivation:** We're trying to solve a real-world problem by using a dataset on insurance fees to promote perfect information in the insurance industry. It is crucial to accurately price policies based on an individual's unique characteristics, detect fraudulent claims, and assess potential customers' risk. By developing a predictive model based on this dataset, insurance companies can reduce the risk of overcharging or undercharging, save significant amounts of money by detecting fraudulent claims, and make informed decisions about offering coverage to potential customers and at what price.
 
 
-### 2. Data preparation and cleaning:
+### [2. Data preparation and cleaning:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_2_DataCleaning.ipynb)
 Obtained from Kaggle, our data was a relatively well-curated one with 7 columns. Some missing cells filled with a standard value of zero(0): df = df.fillna(0) based on reasonable assumption.  
 
 | Variable | Data Type |
