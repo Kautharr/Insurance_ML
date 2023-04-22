@@ -67,7 +67,7 @@ The first step in the exploratory data analysis was to identify the variables th
 Link to Tableau Dashboard: https://public.tableau.com/app/profile/kauthar.ahmed/viz/InsuranceDataDashboard/Dashboard1
 
 
-### 4. Machine Learning Models:
+### [4. Machine Learning Models:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_4_ML.ipynb)
 We explored: Linear Regression, Decision Tree Regression, and Gradient Boosting Regression based on their ability to handle numeric data and complex interactions. Two commonly used metrics, R-squared and RMSE, were used to evaluate the performance of the models. The goal was to ensure the models fit the data well and make accurate predictions.
 
 1. We applied multivariate linear regression to the insurance dataset to predict charges. We utilised the 'get_dummies()' method to convert categorical variables into numerical variables, enabling our model to generate a numerically-derived equation. We then trained the model further by defining the cost function, which is the Residual Sum of Squares (RSS) that needs to be minimised. We implemented a gradient descent algorithm to iteratively adjust the correlation coefficients of our model to minimise the cost function. We observed that the data points in our model lie quite randomly away from the line, which indicates that there is still room for improvement in the performance metric scores of our model.
