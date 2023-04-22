@@ -42,6 +42,10 @@ To obtain favourable data types, we made the following changes to the dataset:
 
 The updated dataframe consists of 10 columns, with the 'smoker_bool', 'sex_bool' and 'region_cat' columns appended to allow for further analysis below (EDA, correlation, etc.). 
 
+| Variable | Data Type |
+|---|---|
+| Age | Integer |
+
 
 ### 3. ****Exploratory Data Analysis:****
 The first step in the exploratory data analysis was to identify the variables that have the most significant impact on the medical insurance charges. To achieve this, we conducted a correlation analysis between the variables. The correlation matrix revealed that smoker_bool, age, and bmi have the highest correlation with charges.
