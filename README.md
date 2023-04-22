@@ -11,11 +11,11 @@ Members:
 1) Kauthar Ahmed Basharahil
 2) Bhupathiraju Mihir Varma 
 3) Parth Batra
-----------------
+
 ### Description:
 This repository contains all the Jupyter Notebooks, datasets, images, video presentations, and the source materials/references we have used and created as part of the Mini Project for SC1015: Introduction to Data Science and AI.
 This README briefly highlights what we have accomplished in this project. For a more detailed explanation, you can refer to the the Jupyter Notebooks in this repository. They contain more in-depth descriptions and finer details which are not mentioned here in the README.
-----------------
+
 ### Table of Contents:
 1. Problem Formulation
 2. Data Preparation and Cleaning
@@ -24,7 +24,7 @@ This README briefly highlights what we have accomplished in this project. For a 
 5. Metrics and Findings
 6. Conclusion
 7. References
-----------------
+
 ### 1. Problem formulation:
 **Our Dataset:** [https://www.kaggle.com/datasets/simranjain17/insurance](https://www.kaggle.com/datasets/simranjain17/insurance)
 
@@ -35,24 +35,25 @@ This README briefly highlights what we have accomplished in this project. For a 
 
 ### 2. Data preparation and cleaning:
 Obtained from Kaggle, our data was a relatively well-curated one with 7 columns. Some missing cells filled with a standard value of zero(0): df = df.fillna(0) based on reasonable assumption.  
+
+| Variable | Data Type |
+|---|---|
+| Age | Integer |
+| Sex | Boolean (String) |
+| Smoker | Boolean (String) |
+| BMI | Float |
+| Charges | Float |
+| Region | Categorical (String) |
+| Number of Children | Float |
+
+The dataset consists of insurance-related information of individuals. The variables in the dataset are age, sex, smoker status, bmi, charges, region, and the number of children. The age and the number of children are represented as an integer while sex and smoker are Boolean values. BMI and charges are decimal values. Region is a categorical variable represented as a string. This dataset can be used to perform various analyses related to insurance.
+
 To obtain favourable data types, we made the following changes to the dataset:
 1. Changed the data type of the 'children' column to integer.
 2. Converted the 'smoker' and 'sex' columns to binary variables: 'smoker_bool' and 'sex_bool' respectively.
 4. Converted the 'region' column to a categorical variable 'region_cat'.  
 
 The updated dataframe consists of 10 columns, with the 'smoker_bool', 'sex_bool' and 'region_cat' columns appended to allow for further analysis below (EDA, correlation, etc.). 
-
-| Variable | Data Type |
-|---|---|
-| Age | Integer |
-| Sex | Boolean |
-| Smoker | Boolean |
-| BMI | Decimal |
-| Charges | Decimal |
-| Region | Categorical (String) |
-| Number of Children | Integer |
-
-The dataset consists of insurance-related information of individuals. The variables in the dataset are age, sex, smoker status, bmi, charges, region, and the number of children. The age and the number of children are represented as an integer while sex and smoker are Boolean values. BMI and charges are decimal values. Region is a categorical variable represented as a string. This dataset can be used to perform various analyses related to insurance.
 
 
 ### 3. ****Exploratory Data Analysis:****
@@ -66,7 +67,7 @@ Link to Tableau Dashboard: https://public.tableau.com/app/profile/kauthar.ahmed/
 
 
 ### 4. Machine Learning Models:
-We explored selected models like Linear Regression, Decision Tree Regression, and Gradient Boosting Regression based on their ability to handle numeric data and complex interactions. Two commonly used metrics, R-squared and RMSE, were used to evaluate the performance of the models. The goal was to ensure the models fit the data well and make accurate predictions.
+We explored: Linear Regression, Decision Tree Regression, and Gradient Boosting Regression based on their ability to handle numeric data and complex interactions. Two commonly used metrics, R-squared and RMSE, were used to evaluate the performance of the models. The goal was to ensure the models fit the data well and make accurate predictions.
 
 1. We applied multivariate linear regression to the insurance dataset to predict charges. We utilised the 'get_dummies()' method to convert categorical variables into numerical variables, enabling our model to generate a numerically-derived equation. We then trained the model further by defining the cost function, which is the Residual Sum of Squares (RSS) that needs to be minimised. We implemented a gradient descent algorithm to iteratively adjust the correlation coefficients of our model to minimise the cost function. We observed that the data points in our model lie quite randomly away from the line, which indicates that there is still room for improvement in the performance metric scores of our model.
 2. We applied the CART algorithm to develop a decision tree model for predicting insurance charges. The CART algorithm uses a threshold value of an attribute to split the nodes of the decision tree into sub-nodes and searches for the best homogeneity for the sub-nodes using the Gini Index criterion. Hyperparameters such as 'max_depth=4' were adjusted to optimise the model's performance, and OneHotEncoder and ColumnTransformer were used for data preprocessing. The model produced consistent results comparable to a basic linear regression model.
