@@ -17,15 +17,15 @@ This repository contains all the Jupyter Notebooks, datasets, images, video pres
 This README briefly highlights what we have accomplished in this project. For a more detailed explanation, you can refer to the the Jupyter Notebooks in this repository. They contain more in-depth descriptions and finer details which are not mentioned here in the README.
 
 ### Table of Contents:
-[1. Problem Formulation](https://github.com/Kautharr/Insurance_ML/blob/main/README.md)
-[2. Data Preparation and Cleaning](https://github.com/Kautharr/Insurance_ML/blob/main/README.md)
-[3. Exploratory Data Analysis](https://github.com/Kautharr/Insurance_ML/blob/main/README.md)
-[4. Machine Learning Models](https://github.com/Kautharr/Insurance_ML/blob/main/README.md)
-[5. Metrics and Findings](https://github.com/Kautharr/Insurance_ML/blob/main/README.md)
-[6. Conclusion](https://github.com/Kautharr/Insurance_ML/blob/main/README.md)
-[7. References](https://github.com/Kautharr/Insurance_ML/blob/main/README.md)
+1. Problem Formulation
+2. Data Preparation and Cleaning
+3. Exploratory Data Analysis
+4. Machine Learning Models
+5. Metrics and Findings
+6. Conclusion
+7. References
 
-### [1. Problem formulation:]()
+### [1. Problem formulation:]
 
 **Our Dataset:** [https://www.kaggle.com/datasets/simranjain17/insurance](https://www.kaggle.com/datasets/simranjain17/insurance)
 
