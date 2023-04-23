@@ -46,7 +46,7 @@ This README briefly highlights what we have accomplished in this project. If you
 ### 2. [Data preparation and cleaning:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_2_DataCleaning.ipynb)  
 
 **Our Dataset:** [https://www.kaggle.com/datasets/simranjain17/insurance](https://www.kaggle.com/datasets/simranjain17/insurance)  
-The dataset used consists of individuals' insurance-related information. The variables in the dataset are `age`, `sex`, `smoker`, `bmi`, `region` and `children`. `charges` is our response variable, which is the insurance premium fees.  
+The dataset used consists of individuals' insurance-related information. The variables in the dataset are `age`, `sex`, `smoker`, `bmi`, `region` and `children`. `charges` is our response variable, which is the insurance premiums.  
 
 Their datatypes are as follows:
 
@@ -143,9 +143,6 @@ This [video](https://github.com/Kautharr/Insurance_ML/blob/main/Video%20Demos/To
 4. https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/ 
 5. https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost.html 
 6. https://towardsdatascience.com/https-medium-com-vishalmorde-xgboost-algorithm-long-she-may-rein-edd9f99be63d 
-
-
-
 
 
 
