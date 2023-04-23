@@ -1,8 +1,8 @@
 # PROJECT: Machine Learning for Predicting Insurance Premiums
 
-*SCSE, NTU*  
+*SCSE, NTU Singapore*  
+Year: 22/23, Semester 2   
 Course Title: SC1015  
-Year: 22/23, Semester 2  
 Lab Group: A139  
 Team: 4 
 
@@ -10,7 +10,7 @@ Members:
 
 1) [Kauthar](https://github.com/Kautharr) Ahmed Basharahil
 2) Bhupathiraju [Mihir](https://github.com/mvbr23) Varma 
-3) Parth Batra
+3) [Parth](https://github.com/bparth25) Batra
 
 ## Description:
 This repository contains all the Jupyter Notebooks, images, video demonstrations, dataset and the sources we have referenced as part of the Mini Project for SC1015: Introduction to Data Science and AI.  
@@ -37,14 +37,18 @@ This README briefly highlights what we have accomplished in this project. If you
 
 **Our Motivation:** We want to minimise the information imbalance in the insurance industry. It is crucial to accurately price policies based on an individual's unique characteristics as it can be useful in detecting fraudulent claims and assessing a potential customers' risk. By developing predictive models based on this dataset, insurance companies can reduce the likelihood of overcharging or undercharging, save significant amounts of revenue by detecting fraudulent claims and make informed decisions about offering coverage to potential customers and at the appropriate price.
 
-**Problem Definition:** To develop a machine learning model that can, as far as possible, accurately predict insurance premiums based on a given set of demographic and health-related data.
+**Problem Definition:** To develop a machine learning model that can, as far as possible, accurately predict appropriate insurance premiums based on a given set of demographic and health-related data.
+
+**Assumption:** "Appropriate" insurance premiums are highly subjective, as it is with medical bills. We assume that the current level of charges given to respective users in the `insurance.csv` dataset has been regulated "appropriately".
 
 ---
 <a name="data"></a>
 ### 2. [Data preparation and cleaning:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_2_DataCleaning.ipynb)  
 
 **Our Dataset:** [https://www.kaggle.com/datasets/simranjain17/insurance](https://www.kaggle.com/datasets/simranjain17/insurance)  
-The dataset used consists of individuals' insurance-related information. The variables in the dataset are `age`, `sex`, `smoker`, `bmi`, `charges`, `region` and `children`. Their datatypes are as follows:
+The dataset used consists of individuals' insurance-related information. The variables in the dataset are `age`, `sex`, `smoker`, `bmi`, `region` and `children`. `charges` is our response variable, which is the insurance premium fees.  
+
+Their datatypes are as follows:
 
 | Variable | Data Type |
 |---|---|
@@ -109,7 +113,7 @@ After iterating between values for hyper parameters, we obtained a Model Score (
 ### 6. [Conclusion:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_5_FinalModel.ipynb)
 **Based on our experimentations with all the models, some learning points we tookaway were:**
 1. Finding out that adjusting hyper parameters can have adverse impacts on overall model quality. Though, solely increasing certain parameters may not be advisable as overfitting usually occurs which jeopardises the model explainability, as indicated by the `R2` score. 
-2. Complex algorithms are useful when it comes to dealing with real life scenarios which are highly unpredictable. In cases like insurance `charge` prediction, it is highly dependent on inter-variable conditions, where complex algorithms can be much more insightful and effective than a simle linear regression.
+2. Complex algorithms are useful when it comes to dealing with real life scenarios which are highly unpredictable. In cases like insurance `charge` prediction, it is highly dependent on inter-variable conditions, where complex algorithms can be much more insightful and effective than a simple linear regression implementation.
 
 **Review of Problem Definition:**  
 In conclusion, we believe that the problem has been addressed successfully. We were able to implement Machine Learning algorithms learnt, as well as incorporate real life exploratory data analysis, to generate an improved model with impressive predictive abilities (by our standards). Our beliefs in the project's success were further affirmed when we set out to test it on **individual data**. 
@@ -120,9 +124,13 @@ In conclusion, we believe that the problem has been addressed successfully. We w
 3. Created a widget to obtain the `6` arguments from "User"
 4. Entered random data points from the `insurance.csv`
 5. Compared the model-predicted `charges` to the actual one in csv
-This video demonstrates how analysts or even clients of insurance companies can benefit from a machine learning tool. They are able to generate a prediction of appropriate premium charges by entering the User's demographics and health data .
+  
+This video demonstrates a simulation of how analysts, or even clients, of insurance companies can interact with a machine learning tool. The model would then generate a prediction of appropriate premium charges by entering User's demographics and health data. 
 
-Limitations:
+**Limitations:**
+1. There is an assumption that our two metrics are sufficient performance measures of our model. For an even more holistic approach, other indicators such as the Cohen's Kappa can be included to take into account the possibility of random agreements between predicted and actual charges.
+2. The dataset is highly sitiuational, and therefore predicted `charges` may not be representative of everyone around the world. New and more applicable datasets might have to be generated for other purposes.
+3. Historical datasets may be unrepresentative of future occurence. Specifically in the insurance industry, worldwide pandemic such as Covid-19 may cause the appropriate `charges` to be higher due to increased overall hospital bills. 
 
 ---
 <a name="references"></a>
