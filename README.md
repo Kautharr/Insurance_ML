@@ -13,7 +13,7 @@ Members:
 3) [Parth](https://github.com/bparth25) Batra
 
 ## Description:
-This repository contains all the Jupyter Notebooks, images, video demonstrations, dataset and the sources we have referenced as part of the Mini Project for SC1015: Introduction to Data Science and AI.  
+This repository contains all the Jupyter Notebooks, images, pressentation slides, video demonstrations, dataset and the sources we have referenced as part of the Mini Project for SC1015: Introduction to Data Science and AI.  
 This README briefly highlights what we have accomplished in this project. If you would like a more detailed explanation, please refer to the the Jupyter Notebooks in this repository as they contain in-depth descriptions and finer details which may not be mentioned here.
 
 ---
