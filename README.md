@@ -1,4 +1,4 @@
-# PROJECT: Machine Learning for Predicting Insurance Premiums
+# Machine Learning for Predicting Insurance Premiums
 
 *SCSE, NTU Singapore*  
 Year: 22/23, Semester 2   
