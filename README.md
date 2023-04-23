@@ -101,7 +101,6 @@ After iterating between values for hyper parameters, we obtained a Model Score o
 ---
 <a name="conclusion"></a>
 ### 6. [Conclusion:](#https://github.com/Kautharr/Insurance_ML/blob/main/Part_5_FinalModel.ipynb)
-<a name="conclude"></a>
 
 ---
 <a name="references"></a>
