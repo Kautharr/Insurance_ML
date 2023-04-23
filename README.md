@@ -125,7 +125,8 @@ In conclusion, we believe that the problem has been addressed successfully. We w
 4. Entered random data points from the `insurance.csv`
 5. Compared the model-predicted `charges` to the actual one in csv
   
-This video demonstrates a simulation of how analysts, or even clients, of insurance companies can interact with a machine learning tool. The model would then generate a prediction of appropriate premium charges by entering User's demographics and health data. 
+This [video](https://github.com/Kautharr/Insurance_ML/blob/main/Video%20Demos/ToolDemo.MOV) demonstrates a simulation of how analysts, or even clients, of insurance companies can interact with a machine learning tool. The model would then generate a prediction of appropriate premium charges by entering User's demographics and health data.  
+*"View raw" or "Download" to access content of video*
 
 **Limitations:**
 1. There is an assumption that our two metrics are sufficient performance measures of our model. For an even more holistic approach, other indicators such as the Cohen's Kappa can be included to take into account the possibility of random agreements between predicted and actual charges.
