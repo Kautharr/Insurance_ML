@@ -112,7 +112,7 @@ After iterating between values for hyper parameters, we obtained a Model Score (
 ---
 <a name="conclusion"></a>
 ### 6. [Conclusion:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_5_FinalModel.ipynb)
-**Based on our experimentations with all the models, some learning points we tookaway were:**
+**Based on our experimentations with all the models, some learning points we took away were:**
 1. Finding out that adjusting hyper parameters can have adverse impacts on overall model quality. Though, solely increasing certain parameters may not be advisable as overfitting usually occurs which jeopardises the model explainability, as indicated by the `R2` score. 
 2. Complex algorithms are useful when it comes to dealing with real life scenarios which are highly unpredictable. In cases like insurance `charge` prediction, it is highly dependent on inter-variable conditions, where complex algorithms can be much more insightful and effective than a simple linear regression implementation.
 
