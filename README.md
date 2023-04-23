@@ -23,6 +23,9 @@ This README briefly highlights what we have accomplished in this project. If you
 2. [Data Preparation and Cleaning](#data)
 3. [Exploratory Data Analysis](#eda)
 4. [Machine Learning Models](#ml-models)
+    1. [Multivariate Linear Regression](#linreg)
+    2. [Decision/Classification Tree](#dectree)
+    3. [XGBoost (Extreme Gradient Boosting)](#xgboost)
 5. [Experiments and Insights](#exp-and-insights)
 6. [Conclusion](#conclusion)
 7. [References](#references)
@@ -31,16 +34,16 @@ This README briefly highlights what we have accomplished in this project. If you
 <a name="problem-formulation"></a>
 ### 1. [Problem formulation:](#problem)
 <a name="problem"></a>
-**Our Dataset:** [https://www.kaggle.com/datasets/simranjain17/insurance](https://www.kaggle.com/datasets/simranjain17/insurance)
+
+**Our Motivation:** We want to minimise the information imbalance in the insurance industry. It is crucial to accurately price policies based on an individual's unique characteristics as it can be useful in detecting fraudulent claims and assessing a potential customers' risk. By developing predictive models based on this dataset, insurance companies can reduce the likelihood of overcharging or undercharging, save significant amounts of revenue by detecting fraudulent claims and make informed decisions about offering coverage to potential customers and at the appropriate price.
 
 **Problem Definition:** To develop a machine learning model that can, as far as possible, accurately predict insurance premiums based on a given set of demographic and health-related data.
 
-**Motivation:** We want to minimise the information imbalance in the insurance industry. It is crucial to accurately price policies based on an individual's unique characteristics as it can be useful in detecting fraudulent claims and assessing a potential customers' risk. By developing predictive models based on this dataset, insurance companies can reduce the likelihood of overcharging or undercharging, save significant amounts of revenue by detecting fraudulent claims and make informed decisions about offering coverage to potential customers and at the appropriate price.
-
 ---
 <a name="data"></a>
-### 2. [Data preparation and cleaning:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_2_DataCleaning.ipynb)
+### 2. [Data preparation and cleaning:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_2_DataCleaning.ipynb)  
 
+**Our Dataset:** [https://www.kaggle.com/datasets/simranjain17/insurance](https://www.kaggle.com/datasets/simranjain17/insurance)  
 The dataset used consists of individuals' insurance-related information. The variables in the dataset are `age`, `sex`, `smoker`, `bmi`, `charges`, `region` and `children`. Their datatypes are as follows:
 
 | Variable | Data Type |
@@ -82,8 +85,11 @@ Training models: The data-training process involved fitting each of our 3 models
 During the training process, the hyper-parameters were adjusted to find the optimal values that gave the best performance on the test set. The performance of the model was evaluated on the test set to ensure that it generalises well to unseen data.
 Overall, the training process involved finding the best combination of hyper-parameters that minimised the error between the predicted and actual values, as measured by the chosen metrics. 
 
+<a name="linreg"></a>
 1. Multivariate linear regression was our first model applied to the insurance dataset for predicting charges. We utilised the `get_dummies()` method to convert categorical variables into numerical variables, enabling our model to generate a numerically-derived equation. We then trained the model further by defining the cost function, which is the Residual Sum of Squares (`RSS`) that needs to be minimised. We implemented a gradient descent algorithm to iteratively adjust the correlation coefficients of our model to minimise the cost function. We observed that the data points in our model lie quite randomly away from the line, which indicates that there is still room for improvement in the performance metric scores of our model.
+<a name="dectree"></a>
 2. We applied the CART algorithm to develop a decision tree model for predicting insurance charges. The CART algorithm uses a threshold value of an attribute to split the nodes of the decision tree into sub-nodes and searches for the best homogeneity for the sub-nodes using the Gini Index criterion. Hyperparameters such as `max_depth` were adjusted to optimise the model's performance, and `OneHotEncoder` and `ColumnTransformer` were used for data preprocessing. The model produced consistent results comparable to a basic linear regression model.
+<a name="xgboost"></a>
 3. The XGBoost algorithm was used to train a regression model that predicts insurance charges based on input features. The categorical features were one-hot encoded and 80% of the dataset was used for training. The model was then trained to minimise the mean squared error loss function. Overall, the XGBoost model was the most accurate machine learning prediction model for the insurance prediction problem. As our strongest model, we proceeded to conduct experiments to improve the "baseline" XGBoost. This was done by adding weights to the training samples based on whether a person's smoker status and the charges they incur based on their BMI and age. The XGBoost algorithm's capability to compute additional columns with multipliers from the response variable was also utilised to increase the weight of certain samples in the training process. 
 
 *The performance of the model was evaluated using `R2` score and `RMSE` metrics. The `R2` score measures how well the model fits the data, while the `RMSE` measures the difference between the predicted and actual values.
@@ -96,17 +102,38 @@ We incorporated findings from our EDA to stregthen our model of choice by:
 2. Computing charges using linear regression for `smoker` status against `bmi` and `age` (equations generated from Tableau)
 3. Fine-tuning hyper parameters such as: `n_estimators`, `max_depth` and `learning_rate`
 
-After iterating between values for hyper parameters, we obtained a Model Score (`R2`) of 90.8% with an `RMSE` of 3554.67 for this improved version, highest amongst other models generated, by at least 5%. This indicates that our experiments produced a more holistic model which: manages to explain the variance in charges with an exceptional degree, does not overfit the trained dataset and produces predictions on test datasets which has the least deviation (most accurate) from actual `charge` values.
+After iterating between values for hyper parameters, we obtained a Model Score (`R2`) of 90.8% with an `RMSE` of 3554.67 for this improved version; highest amongst other models generated, by at least 5%. This indicates that our experiments produced a more holistic model which: manages to explain the variance in charges with an exceptional degree, does not overfit the trained dataset and produces predictions on test datasets which has the least deviation (most accurate) from actual `charge` values.
 
 ---
 <a name="conclusion"></a>
 ### 6. [Conclusion:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_5_FinalModel.ipynb)
-Based on our experimentations with all the models, 
+**Based on our experimentations with all the models, some learning points we tookaway were:**
+1. Finding out that adjusting hyper parameters can have adverse impacts on overall model quality. Though, solely increasing certain parameters may not be advisable as overfitting usually occurs which jeopardises the model explainability, as indicated by the `R2` score. 
+2. Complex algorithms are useful when it comes to dealing with real life scenarios which are highly unpredictable. In cases like insurance `charge` prediction, it is highly dependent on inter-variable conditions, where complex algorithms can be much more insightful and effective than a simle linear regression.
+
+**Review of Problem Definition:**  
+In conclusion, we believe that the problem has been addressed successfully. We were able to implement Machine Learning algorithms learnt, as well as incorporate real life exploratory data analysis, to generate an improved model with impressive predictive abilities (by our standards). Our beliefs in the project's success were further affirmed when we set out to test it on **individual data**. 
+
+**Testing on individual data**
+1. Trained our final model with 100% of the dataset
+2. Converted this model into a callable function, *IMPROVED_predict_charges(age, sex, bmi, children, smoker, region)*
+3. Created a widget to obtain the `6` arguments from "User"
+4. Entered random data points from the `insurance.csv`
+5. Compared the model-predicted `charges` to the actual one in csv
+This video demonstrates how analysts or even clients of insurance companies can benefit from a machine learning tool. They are able to generate a prediction of appropriate premium charges by entering the User's demographics and health data .
+
+Limitations:
 
 ---
 <a name="references"></a>
 ### 7. [References:](#ref-list)
 <a name="ref-list"></a>
+1. https://www.iii.org/publications/a-firm-foundation-how-insurance-supports-the-economy/introduction/insurance-industry-at-a-glance 
+2. https://www.kaggle.com/datasets/simranjain17/insurance 
+3. https://medium.com/analytics-vidhya/ordinary-least-square-ols-method-for-linear-regression-ef8ca10aadfc 
+4. https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/ 
+5. https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost.html 
+6. https://towardsdatascience.com/https-medium-com-vishalmorde-xgboost-algorithm-long-she-may-rein-edd9f99be63d 
 
 
 
