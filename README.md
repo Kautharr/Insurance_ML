@@ -1,20 +1,20 @@
-# Machine Learning for Predicting Insurance Premiums
+# PROJECT: Machine Learning for Predicting Insurance Premiums
 
-*NTU SCSE*  
-Course: SC1015  
-Year: 22/23 Semester 2  
+*SCSE, NTU*  
+Course Title: SC1015  
+Year: 22/23, Semester 2  
 Lab Group: A139  
 Team: 4 
 
 Members: 
 
-1) Kauthar Ahmed Basharahil
-2) Bhupathiraju Mihir Varma 
+1) [Kauthar](https://github.com/Kautharr) Ahmed Basharahil
+2) Bhupathiraju [Mihir](https://github.com/mvbr23) Varma 
 3) Parth Batra
 
 ## Description:
 This repository contains all the Jupyter Notebooks, images, video demonstrations, dataset and the sources we have referenced as part of the Mini Project for SC1015: Introduction to Data Science and AI.  
-This README briefly highlights what we have accomplished in this project. If you would like a more detailed explanation, please refer to the the Jupyter Notebooks in this repository as they contain more in-depth descriptions and finer details which may not be mentioned here.
+This README briefly highlights what we have accomplished in this project. If you would like a more detailed explanation, please refer to the the Jupyter Notebooks in this repository as they contain in-depth descriptions and finer details which may not be mentioned here.
 
 ---
 
@@ -71,7 +71,7 @@ The first step in the exploratory data analysis was to identify the variables th
 3. Exploring SMOKER v Charges: The box plot tells us that the median charges for non-smokers were significantly lower than those of smokers, by around 300%. There was also less variability in charges for non-smokers. Surprisingly, the median charge for smokers is almost the same as the highest outlier for non-smokers.
 4. Further analysis conducted for SMOKER category  on Tableau. We found that splitting the category of clients into smokers and non-smokers can provide further insights when analysed again with AGE and BMI variables.  
 
-Interactive Dashboard available on [Tableau](https://public.tableau.com/app/profile/kauthar.ahmed/viz/InsuranceDataDashboard/Dashboard1)
+*Interactive Dashboard available on [Tableau](https://public.tableau.com/app/profile/kauthar.ahmed/viz/InsuranceDataDashboard/Dashboard1)
 
 ---
 <a name="ml-models"></a>
@@ -86,7 +86,7 @@ Overall, the training process involved finding the best combination of hyper-par
 2. We applied the CART algorithm to develop a decision tree model for predicting insurance charges. The CART algorithm uses a threshold value of an attribute to split the nodes of the decision tree into sub-nodes and searches for the best homogeneity for the sub-nodes using the Gini Index criterion. Hyperparameters such as `max_depth` were adjusted to optimise the model's performance, and `OneHotEncoder` and `ColumnTransformer` were used for data preprocessing. The model produced consistent results comparable to a basic linear regression model.
 3. The XGBoost algorithm was used to train a regression model that predicts insurance charges based on input features. The categorical features were one-hot encoded and 80% of the dataset was used for training. The model was then trained to minimise the mean squared error loss function. Overall, the XGBoost model was the most accurate machine learning prediction model for the insurance prediction problem. As our strongest model, we proceeded to conduct experiments to improve the "baseline" XGBoost. This was done by adding weights to the training samples based on whether a person's smoker status and the charges they incur based on their BMI and age. The XGBoost algorithm's capability to compute additional columns with multipliers from the response variable was also utilised to increase the weight of certain samples in the training process. 
 
-*The performance of the model was evaluated using various metrics such as `R2` score and `RMSE`. The `R2` score measures how well the model fits the data, while the `RMSE` measures the difference between the predicted and actual values.
+*The performance of the model was evaluated using `R2` score and `RMSE` metrics. The `R2` score measures how well the model fits the data, while the `RMSE` measures the difference between the predicted and actual values.
 
 ---
 <a name="exp-and-insights"></a>
@@ -96,11 +96,12 @@ We incorporated findings from our EDA to stregthen our model of choice by:
 2. Computing charges using linear regression for `smoker` status against `bmi` and `age` (equations generated from Tableau)
 3. Fine-tuning hyper parameters such as: `n_estimators`, `max_depth` and `learning_rate`
 
-After iterating between values for hyper parameters, we obtained a Model Score of 90.8% with an RMSE of 3554.67 for this improved version, highest amongst other models generated, by at least 5%. This indicates that our experiments produced a more holistic model which: manages to explain the variance in charges with an exceptional degree, does not overfit the trained dataset and produces predictions on test datasets which has the least deviation (most accurate) from actual `charge` values.
+After iterating between values for hyper parameters, we obtained a Model Score (`R2`) of 90.8% with an `RMSE` of 3554.67 for this improved version, highest amongst other models generated, by at least 5%. This indicates that our experiments produced a more holistic model which: manages to explain the variance in charges with an exceptional degree, does not overfit the trained dataset and produces predictions on test datasets which has the least deviation (most accurate) from actual `charge` values.
 
 ---
 <a name="conclusion"></a>
-### 6. [Conclusion:](#https://github.com/Kautharr/Insurance_ML/blob/main/Part_5_FinalModel.ipynb)
+### 6. [Conclusion:](https://github.com/Kautharr/Insurance_ML/blob/main/Part_5_FinalModel.ipynb)
+Based on our experimentations with all the models, 
 
 ---
 <a name="references"></a>
