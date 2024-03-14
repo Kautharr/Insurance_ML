@@ -3,14 +3,7 @@
 *SCSE, NTU Singapore*  
 Year: 22/23, Semester 2   
 Course Title: SC1015  
-Lab Group: A139  
-Team: 4 
 
-Members: 
-
-1) [Kauthar](https://github.com/Kautharr) Ahmed Basharahil
-2) Bhupathiraju [Mihir](https://github.com/mvbr23) Varma 
-3) [Parth](https://github.com/bparth25) Batra
 
 ## Description:
 This repository contains all the Jupyter Notebooks, images, presentation slides, video demonstrations, dataset and the sources we have referenced as part of the Mini Project for SC1015: Introduction to Data Science and AI.  
